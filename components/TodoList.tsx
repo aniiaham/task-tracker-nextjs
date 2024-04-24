@@ -4,9 +4,10 @@ const TodoList = ({ todos }) => {
   return (
     <div>
       {todos.map((todo) => (
-        <Todo todo={todo} key={todo.id} />
+        <Todo key={todo.id} todo={todo} />
       ))}
     </div>
   )
 }
+
 export default TodoList

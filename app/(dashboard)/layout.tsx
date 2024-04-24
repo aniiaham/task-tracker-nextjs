@@ -3,7 +3,9 @@ import NewTodoForm from '@/components/NewTodoForm'
 const DashboardLayout = ({ children }) => {
   return (
     <div>
-      <h1>dashboard</h1>
+      <div>
+        <h1>Todos</h1>
+      </div>
       <div>
         <NewTodoForm />
       </div>
@@ -11,4 +13,5 @@ const DashboardLayout = ({ children }) => {
     </div>
   )
 }
+
 export default DashboardLayout

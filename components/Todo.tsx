@@ -1,16 +1,15 @@
 'use client'
-
 import { completeTodo } from '@/utils/actions'
 import { useTransition } from 'react'
 
 const Todo = ({ todo }) => {
-  const [isPending, startTransitions] = useTransition()
+  const [isPending, startTransition] = useTransition()
   return (
     <div
-      onClick={() => startTransitions(() => completeTodo(todo.id))}
-      className={`border border-black/20 cursor-pointer ${
-        todo.completed ? 'strike-through text-gray-900' : ''
+      className={`px-8 py-2 border border-black/25 cursor-pointer ${
+        todo.completed ? 'line-through text-black/30' : ''
       }`}
+      onClick={() => startTransition(() => completeTodo(todo.id))}
     >
       {todo.content}
     </div>
