@@ -6,7 +6,7 @@ const Todo = ({ todo }) => {
   const [isPending, startTransition] = useTransition()
   return (
     <div
-      className={`px-8 py-2 border border-black/25 cursor-pointer ${
+      className={`px-8 py-2 border border-black/20 cursor-pointer max-w-lg  ${
         todo.completed ? 'line-through text-black/30' : ''
       }`}
       onClick={() => startTransition(() => completeTodo(todo.id))}

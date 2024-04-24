@@ -2,7 +2,7 @@ import Todo from './Todo'
 
 const TodoList = ({ todos }) => {
   return (
-    <div>
+    <div className="container mx-auto">
       {todos.map((todo) => (
         <Todo key={todo.id} todo={todo} />
       ))}

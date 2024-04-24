@@ -15,10 +15,6 @@ const links = [
     label: 'Home',
   },
   {
-    href: '/docs',
-    label: 'Docs',
-  },
-  {
     href: '/todos',
     label: 'Todos',
   },
@@ -34,7 +30,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header>
           <nav>
-            <ul className="flex items-center">
+            <ul className="flex items-center flex-row gap-16 justify-start cursor-pointer container mx-auto my-6 text-blue-950 font-medium">
               {links.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>{link.label}</Link>
